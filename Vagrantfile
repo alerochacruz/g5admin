@@ -144,6 +144,6 @@ Vagrant.configure("2") do |config|
 end
 
 # PENDIENTES
-# Interntar incorportar nodo con Windows 10
+# Intentar incorporar nodo con Windows 10
 # https://portal.cloud.hashicorp.com/vagrant/discover/gusztavvargadr/windows-10
 
