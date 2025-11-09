@@ -41,7 +41,7 @@ Las automatizaciones están diseñadas para ejecutarse desde un nodo central (`v
 - Conectividad SSH entre `vps1` y los nodos remotos.
 - Llaves SSH configuradas para acceso sin contraseña.
 - Módulos parte de la biblioteca estándar de Python: `subprocess`, `os`, `shutil`, `platform`, `datetime`.
-- Móudlo externo de Python: `psutil`.
+- Módulo externo de Python: `psutil`.
 
 > Nota: El módulo `psutil`, necesario para la Automatización N.º 1, es instalado automáticamente por Vagrant en los nodos Debian durante el aprovisionamiento. Para instalar `psutil` en el nodo Windows:
 > ```powershell
@@ -121,7 +121,7 @@ vagrant ssh vps1_sistemas
 
 > Asegúrese de tener instalado [Vagrant](https://www.vagrantup.com/downloads) y [VirtualBox](https://www.virtualbox.org/wiki/Downloads) antes de iniciar.
 
-#### Confianza SSH (`know_hosts`)
+#### Confianza SSH (`known_hosts`)
 
 Para asegurar que la máquina virtual principal (`vps1_sistemas`, IP `192.168.0.250`) pueda conectarse a las otras máquinas virtuales (`vps2_gerencia`, `vps3_ventas`, `vps4_arte`) a través de SSH sin recibir advertencias de seguridad sobre llaves de host desconocidas, deben añadirse las llaves públicas de los *hosts* de destino al archivo `known_hosts` de la máquina de origen.
 
@@ -139,5 +139,5 @@ Importante: El uso de `ssh-keyscan` de esta manera es apropiado y conveniente pa
 
 ## Licencia
 
-Este proyecto es de uso académico y educativo. Puede adaptarse libremente para sus propios fines de aprendizaje.
+Este proyecto es para uso académico y educativo. Puede adaptarse libremente para fines de aprendizaje propios.
 
