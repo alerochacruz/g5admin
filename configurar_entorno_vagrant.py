@@ -13,6 +13,7 @@ def configurar_entorno():
     ruta_llaves_compartidas.mkdir(parents=True, exist_ok=True)
 
     # 2. Generar un par de llaves si no existe
+    # -N "" genera la llave privada sin passphrase para uso automatizado sin interacción.
     ruta_llave_privada = Path("ssh_keypair/vm1_to_others")
     carpeta_llaves = ruta_llave_privada.parent
     carpeta_llaves.mkdir(parents=True, exist_ok=True)
@@ -28,7 +29,7 @@ def configurar_entorno():
                 "-N", ""
             ], check=True)
         except FileNotFoundError:
-            print("Error: no se encontró 'ssh-keygen'. Asegúrate de tener OpenSSH instalado y en tu PATH.")
+            print("Error: no se encontró \"ssh-keygen\". Asegúrese de tener OpenSSH instalado y en su PATH.")
             return
         except subprocess.CalledProcessError as e:
             print(f"Error al generar la llave SSH: {e}")
@@ -39,7 +40,7 @@ def configurar_entorno():
     destino_llave_publica = ruta_llaves_compartidas / ruta_llave_publica.name
     shutil.copy2(ruta_llave_publica, destino_llave_publica)
 
-    print("Configuración local completa. Ahora podés ejecutar 'vagrant up'.")
+    print("Configuración local completa. Ahora puede ejecutar \"vagrant up\".")
 
 configurar_entorno()
 
