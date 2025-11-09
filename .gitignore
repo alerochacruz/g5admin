@@ -1,0 +1,12 @@
+# Directorios y archivos relacionados con Vagrant
+.vagrant/
+Vagrantfile.bak
+Vagrantfile.local
+
+# SEGURIDAD: Directorios que contienen datos sensibles (llaves SSH)
+# La llave privada NUNCA debe ser subida (commit).
+ssh_keypair/
+
+# REPRODUCIBILIDAD: La carpeta compartida es creada localmente por
+# "configurar_entorno_vagrant.py" y no debería ser seguidas por Git.
+shared/
